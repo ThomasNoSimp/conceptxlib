@@ -14,6 +14,6 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-        ["conceptxlib"] = "src.lib.conceptxlib.lua"
+        ["conceptxlib"] = "src/lib/conceptxlib.lua"
     }
 }
