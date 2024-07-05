@@ -20,7 +20,7 @@ local conceptxlib = {}
 -- @field method string The method of learning (e.g., "online", "offline"). This indicates whether the student 
 -- is learning online or offline.
 local studentData = {
-    { id = 1, name = "Aung Ye Win", age = 14, class = "Secondary 2A", method = "online" },
+    { id = 1, name = "Aung Ye Win", age = 14, class = "Secondary 2A", method = "online"},
     { id = 2, name = "Eaint Thiri San", age = 14, class = "Secondary 2A", method = "online"},
     { id = 3, name = "Eaint Thu Kha", age = 14, class = "Secondary 2A", method = "online"},
     { id = 4, name = "Ei Lin Pyae", age = 14, class = "Secondary 2A", method = "online"},
