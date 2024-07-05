@@ -1,7 +1,8 @@
 package = "conceptxlib"
-version = "1.0-1"
+version = "1.0-4"
 source = {
-    url = "https://github.com/ThomasNoSimp/conceptxlib/blob/master/src/lib/conceptxlib.lua"
+    url = "https://github.com/ThomasNoSimp/conceptxlib/archive/refs/heads/master.zip",
+    dir = "conceptxlib-master"
 }
 description = {
     summary = "Student Data Management Library for Lua",

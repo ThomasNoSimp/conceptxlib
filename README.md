@@ -19,7 +19,9 @@
 
 ## Installation
 
-To use `conceptxlib` in your Lua project, simply copy the `conceptxlib.lua` file into your project directory and require it in your code:
+```bash
+luarocks install conceptxlib
+```
 
 ```lua
 local conceptxlib = require("conceptxlib")
