@@ -20,42 +20,82 @@ local conceptxlib = {}
 -- @field method string The method of learning (e.g., "online", "offline"). This indicates whether the student 
 -- is learning online or offline.
 local studentData = {
-    { id = 1, name = "Aung Ye Win", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 2, name = "Eaint Thiri San", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 3, name = "Eaint Thu Kha", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 4, name = "Ei Lin Pyae", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 5, name = "Ei Pwint Phyu", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 6, name = "Hay Mar Pyae Sone", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 7, name = "Hein Htet Naing", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 8, name = "Hsu Dagu Naing", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 9, name = "Hsu Htoo Phyu Sin", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 10, name = "Htin Htin Lu Win", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 11, name = "Kaung Myat Ye Aung", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 12, name = "Kyaw Kyal Sin Moe", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 13, name = "Kyaw Myitzu Thar", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 14, name = "Lin Pyae Aung", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 15, name = "Wint Yati Kyaw", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 16, name = "Mahay Thi", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 17, name = "May Myat Mon", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 18, name = "Nan Hom Kham", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 19, name = "Nan Mwam Mwam", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 20, name = "Nway Thit Cho", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 21, name = "Nyan Lin Myint", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 22, name = "Paing Nyi Han", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 23, name = "Pe Ti Khin Nan Win", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 24, name = "San Wana Zaw", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 25, name = "Shine Wana Htun", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 26, name = "Shoon lae Lae Kyaw", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 27, name = "Shwe Sin Minn", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 28, name = "Shwe Yee Hnin Wai", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 29, name = "Shwe Yee Htet", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 30, name = "Shwe Yi Chan Myae", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 31, name = "Su Myat Thet", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 32, name = "Su Sandy Htun", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 33, name = "Su Shweyi Khaing", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 34, name = "Thura Wai Zin", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 35, name = "Zay Nyi Han", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 36, name = "Saung Hnin Shan", age = 14, class = "Secondary 2A", method = "online"},
+    ["Secondary 2A"] = {
+        { id = 1, name = "Aung Ye Win", age = 14, method = "online"},
+        { id = 2, name = "Eaint Thiri San", age = 14, method = "online"},
+        { id = 3, name = "Eaint Thu Kha", age = 14, method = "online"},
+        { id = 4, name = "Ei Lin Pyae", age = 14, method = "online"},
+        { id = 5, name = "Ei Pwint Phyu", age = 14, method = "online"},
+        { id = 6, name = "Hay Mar Pyae Sone", age = 14, method = "online"},
+        { id = 7, name = "Hein Htet Naing", age = 14, method = "online"},
+        { id = 8, name = "Hsu Dagu Naing", age = 14, method = "online"},
+        { id = 9, name = "Hsu Htoo Phyu Sin", age = 14, method = "online"},
+        { id = 10, name = "Htin Htin Lu Win", age = 14, method = "online"},
+        { id = 11, name = "Kaung Myat Ye Aung", age = 14, method = "online"},
+        { id = 12, name = "Kyaw Kyal Sin Moe", age = 14, method = "online"},
+        { id = 13, name = "Kyaw Myitzu Thar", age = 14, method = "online"},
+        { id = 14, name = "Lin Pyae Aung", age = 14, method = "online"},
+        { id = 15, name = "Wint Yati Kyaw", age = 14, method = "online"},
+        { id = 16, name = "Mahay Thi", age = 14, method = "online"},
+        { id = 17, name = "May Myat Mon", age = 14, method = "online"},
+        { id = 18, name = "Nan Hom Kham", age = 14, method = "online"},
+        { id = 19, name = "Nan Mwam Mwam", age = 14, method = "online"},
+        { id = 20, name = "Nway Thit Cho", age = 14, method = "online"},
+        { id = 21, name = "Nyan Lin Myint", age = 14, method = "online"},
+        { id = 22, name = "Paing Nyi Han", age = 14, method = "online"},
+        { id = 23, name = "Pe Ti Khin Nan Win", age = 14, method = "online"},
+        { id = 24, name = "San Wana Zaw", age = 14, method = "online"},
+        { id = 25, name = "Shine Wana Htun", age = 14, method = "online"},
+        { id = 26, name = "Shoon lae Lae Kyaw", age = 14, method = "online"},
+        { id = 27, name = "Shwe Sin Minn", age = 14, method = "online"},
+        { id = 28, name = "Shwe Yee Hnin Wai", age = 14, method = "online"},
+        { id = 29, name = "Shwe Yee Htet", age = 14, method = "online"},
+        { id = 30, name = "Shwe Yi Chan Myae", age = 14, method = "online"},
+        { id = 31, name = "Su Myat Thet", age = 14, method = "online"},
+        { id = 32, name = "Su Sandy Htun", age = 14, method = "online"},
+        { id = 33, name = "Su Shweyi Khaing", age = 14, method = "online"},
+        { id = 34, name = "Thura Wai Zin", age = 14, method = "online"},
+        { id = 35, name = "Zay Nyi Han", age = 14, method = "online"},
+        { id = 36, name = "Saung Hnin Shan", age = 14, method = "online"},
+    },
+    ["Secondary 3A"] = {
+        { id = 1, name = "Aung Min Khant", age = 15, method = "offline"},
+        { id = 2, name = "Thiri Han", age = 15, method = "offline"},
+        { id = 3, name = "Thu Kha", age = 15, method = "offline"},
+        { id = 4, name = "Lin Pyae Sone", age = 15, method = "offline"},
+        { id = 5, name = "Pwint Phyu", age = 15, method = "offline"},
+        { id = 6, name = "Mar Pyae Sone", age = 15, method = "offline"},
+        { id = 7, name = "Htet Naing", age = 15, method = "offline"},
+        { id = 8, name = "Dagu Naing", age = 15, method = "offline"},
+        { id = 9, name = "Htoo Phyu Sin", age = 15, method = "offline"},
+        { id = 10, name = "Htin Lu Win", age = 15, method = "offline"},
+        { id = 11, name = "Myat Ye Aung", age = 15, method = "offline"},
+        { id = 12, name = "Kyal Sin Moe", age = 15, method = "offline"},
+        { id = 13, name = "Myitzu Thar", age = 15, method = "offline"},
+        { id = 14, name = "Pyae Aung", age = 15, method = "offline"},
+        { id = 15, name = "Yati Kyaw", age = 15, method = "offline"},
+        { id = 16, name = "Thi", age = 15, method = "offline"},
+        { id = 17, name = "Myat Mon", age = 15, method = "offline"},
+        { id = 18, name = "Hom Kham", age = 15, method = "offline"},
+        { id = 19, name = "Mwam Mwam", age = 15, method = "offline"},
+        { id = 20, name = "Thit Cho", age = 15, method = "offline"},
+        { id = 21, name = "Lin Myint", age = 15, method = "offline"},
+        { id = 22, name = "Nyi Han", age = 15, method = "offline"},
+        { id = 23, name = "Khin Nan Win", age = 15, method = "offline"},
+        { id = 24, name = "Wana Zaw", age = 15, method = "offline"},
+        { id = 25, name = "Wana Htun", age = 15, method = "offline"},
+        { id = 26, name = "Lae Lae Kyaw", age = 15, method = "offline"},
+        { id = 27, name = "Sin Minn", age = 15, method = "offline"},
+        { id = 28, name = "Yee Hnin Wai", age = 15, method = "offline"},
+        { id = 29, name = "Yee Htet", age = 15, method = "offline"},
+        { id = 30, name = "Yi Chan Myae", age = 15, method = "offline"},
+        { id = 31, name = "Myat Thet", age = 15, method = "offline"},
+        { id = 32, name = "Sandy Htun", age = 15, method = "offline"},
+        { id = 33, name = "Shweyi Khaing", age = 15, method = "offline"},
+        { id = 34, name = "Wai Zin", age = 15, method = "offline"},
+        { id = 35, name = "Zay Nyi Han", age = 15, method = "offline"},
+        { id = 36, name = "Hnin Shan", age = 15, method = "offline"},
+    },
 }
 
 --#region Functions
@@ -94,14 +134,8 @@ end
 --
 -- In the example, the `fetchByID` function is called with the ID 1. The returned table, which contains the 
 -- student data, is then iterated over, and the student's details are printed.
-function conceptxlib.fetchByID(id)
-    local result = {}
-    for _, student in ipairs(studentData) do
-        if student.id == id then
-            table.insert(result, student)
-        end
-    end
-    return result
+function conceptxlib.fetchByClass(class)
+    return studentData[class]
 end
 
 --- Fetches the student data by name.
@@ -120,14 +154,14 @@ end
 --
 -- In this example, the `fetchByName` function is called with the name "Eaint Thiri San". The returned table, which 
 -- contains the student data, is then iterated over, and the student's details are printed.
-function conceptxlib.fetchByName(name)
-    local result = {}
-    for _, student in ipairs(studentData) do
-        if student.name == name then
-            table.insert(result, student)
+function conceptxlib.fetchByClassAndId(class, id)
+    local classData = studentData[class]
+    for _, student in ipairs(classData) do
+        if student.id == id then
+            return student
         end
     end
-    return result
+    return nil
 end
 
 --#endregion Functions
