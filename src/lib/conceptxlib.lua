@@ -22,8 +22,8 @@ local conceptxlib = {}
 -- @field method string The method of learning (e.g., "online", "offline"). This indicates whether the student 
 -- is learning online or offline.
 local studentData = {
-    { id = 1, name = "Aung Ye Win", age = 14, class = "Secondary 2A", method = "online"},
-    { id = 2, name = "Eaint Thiri San", age = 14, class = "Secondary 2A", method = "online"},
+    { id = 1, name = "Aung Ye Win", age = 14, class = "Secondary 2A", method = "online", email = "aungyewin.conceptx@gmail.com"},
+    { id = 2, name = "Eaint Thiri San", age = 14, class = "Secondary 2A", method = "online", email = "eaintthirisanconceptx@gmail.com"},
     { id = 3, name = "Eaint Thu Kha", age = 14, class = "Secondary 2A", method = "online"},
     { id = 4, name = "Ei Lin Pyae", age = 14, class = "Secondary 2A", method = "online"},
     { id = 5, name = "Ei Pwint Phyu", age = 14, class = "Secondary 2A", method = "online"},
@@ -126,6 +126,32 @@ function conceptxlib.fetchByName(name)
     local result = {}
     for _, student in ipairs(studentData) do
         if student.name == name then
+            table.insert(result, student)
+        end
+    end
+    return result
+end
+
+--- Fetches the student data by email.
+-- This function searches the student data list for a student with the specified email.
+-- It returns a table containing the data of the student with that email. If no student with the given email is found,
+-- an empty table is returned. This function is useful when you need to retrieve information about a specific 
+-- student by their email address.
+--
+-- @param email string The email of the student to fetch.
+-- @return table A table containing student data matching the email.
+-- @usage
+-- local student = conceptxlib.fetchByEmail("aungyewin.conceptx@gmail.com")
+-- for _, s in ipairs(student) do
+--     print(s.name, s.age, s.class, s.method, s.email)
+-- end
+--
+-- In this example, the `fetchByEmail` function is called with the email "aungyewin.conceptx@gmail.com". 
+-- The returned table, which contains the student data, is then iterated over, and the student's details are printed.
+function conceptxlib.fetchByEmail(email)
+    local result = {}
+    for _, student in ipairs(studentData) do
+        if student.email == email then
             table.insert(result, student)
         end
     end
