@@ -1,3 +1,0 @@
--- Test file
--- Do not test in origin/master
--- Test in the branch origin/test
