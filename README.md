@@ -1,7 +1,3 @@
-Sure, here is the updated `README.md` with the new `fetchByEmail` function:
-
----
-
 # conceptxlib: Student Data Management Library
 
 ## Overview
