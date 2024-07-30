@@ -158,6 +158,32 @@ function conceptxlib.fetchByEmail(email)
     return result
 end
 
+--- Fetches the student data by age.
+-- This function searches the student data list for students with the specified age.
+-- It returns a table containing the data of the students with that age. If no students with the given age 
+-- are found, an empty table is returned. This function is useful when you need to retrieve information about 
+-- one or more students who share the same age.
+--
+-- @param age number The age of the student to fetch.
+-- @return table A table containing student data matching the age.
+-- @usage
+-- local students = conceptxlib.fetchByAge(14)
+-- for _, student in ipairs(students) do
+--     print(student.name, student.age, student.class, student.method)
+-- end
+--
+-- In this example, the `fetchByAge` function is called with the age 14. The returned table, which 
+-- contains the student data, is then iterated over, and the student's details are printed.
+function conceptxlib.fetchByAge(age)
+    local result = {}
+    for _, student in ipairs(studentData) do
+        if student.age == age then
+            table.insert(result, student)
+        end
+    end
+    return result
+end
+
 --#endregion Functions
 
 return conceptxlib
