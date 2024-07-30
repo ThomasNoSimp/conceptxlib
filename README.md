@@ -2,7 +2,7 @@
 
 ## Overview
 
-`conceptxlib` is a Lua library designed for managing a list of student records. It provides functions to fetch all student data, fetch student data by ID, fetch student data by name, and fetch student data by email. This library is useful for educational software that needs to manage and retrieve student information efficiently.
+`conceptxlib` is a Lua library meticulously designed for managing a comprehensive list of student records. It provides functions to fetch all student data, as well as to fetch student data by unique identifiers such as ID, name, email, and age. This library is particularly useful for educational software that needs to manage and retrieve student information efficiently.
 
 ## Table of Contents
 
@@ -12,11 +12,13 @@
     - [Fetching Student Data by ID](#fetching-student-data-by-id)
     - [Fetching Student Data by Name](#fetching-student-data-by-name)
     - [Fetching Student Data by Email](#fetching-student-data-by-email)
+    - [Fetching Student Data by Age](#fetching-student-data-by-age)
 3. [API Reference](#api-reference)
     - [fetch](#fetch)
     - [fetchByID](#fetchbyid)
     - [fetchByName](#fetchbyname)
     - [fetchByEmail](#fetchbyemail)
+    - [fetchByAge](#fetchbyage)
 4. [Student Data Structure](#student-data-structure)
 
 ## Installation
@@ -72,6 +74,17 @@ The `fetchByEmail` function searches for a student with a specific email and ret
 local student = conceptxlib.fetchByEmail("aungyewin.conceptx@gmail.com")
 for _, s in ipairs(student) do
     print(s.name, s.age, s.class, s.method, s.email)
+end
+```
+
+### Fetching Student Data by Age
+
+The `fetchByAge` function searches for students with a specific age and returns their data. If no students with the given age are found, an empty table is returned.
+
+```lua
+local students = conceptxlib.fetchByAge(14)
+for _, student in ipairs(students) do
+    print(student.name, student.age, student.class, student.method)
 end
 ```
 
@@ -138,6 +151,22 @@ Fetches the student data by email.
 local student = conceptxlib.fetchByEmail("aungyewin.conceptx@gmail.com")
 ```
 
+### fetchByAge
+
+Fetches the student data by age.
+
+**Parameters:**  
+`age` (number): The age of the student to fetch.
+
+**Returns:**  
+`table`: A table containing student data matching the age.
+
+**Usage:**
+
+```lua
+local students = conceptxlib.fetchByAge(14)
+```
+
 ## Student Data Structure
 
 The student data is stored in a table where each entry represents a student. Each student record contains the following fields:
@@ -159,4 +188,4 @@ The student data is stored in a table where each entry represents a student. Eac
 }
 ```
 
-This library provides a straightforward and efficient way to manage and retrieve student data in Lua. Whether you need to access the entire dataset, or find specific students by their ID, name, or email, `conceptxlib` has the functions to help you do so.
+This library provides a straightforward and efficient way to manage and retrieve student data in Lua. Whether you need to access the entire dataset, or find specific students by their ID, name, email, or age, `conceptxlib` has the functions to help you do so.
