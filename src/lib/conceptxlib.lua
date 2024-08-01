@@ -24,7 +24,7 @@ local conceptxlib = {}
 -- @field email string The email address of the student. This field, when present, contains the student's email address for 
 -- additional contact information.
 local studentData = {
-    { id = 1, name = "Aung Ye Win", age = 14, class = "Secondary 2A", method = "online", email = "aungyewin.conceptx@gmail.com"},
+    { id = 1, name = "Aung Ye Win", age = 14, class = "Secondary 2A", method = "online", email = "aungyewin.conceptx@gmail.com", image_url = ""},
     { id = 2, name = "Eaint Thiri San", age = 14, class = "Secondary 2A", method = "online", email = "eaintthirisanconceptx@gmail.com"},
     { id = 3, name = "Eaint Thu Kha", age = 14, class = "Secondary 2A", method = "online", email = "eaintthukha.conceptx@gmail.com"},
     { id = 4, name = "Ei Lin Pyae", age = 14, class = "Secondary 2A", method = "online", email = "eilinpyae.conceptx@gmail.com"},
@@ -37,10 +37,10 @@ local studentData = {
     { id = 11, name = "Kaung Myat Ye Aung", age = 14, class = "Secondary 2A", method = "online", email = "kaungmyatyeaung.conceptx@gmail.com"},
     { id = 12, name = "Kyaw Kyal Sin Moe", age = 14, class = "Secondary 2A", method = "online", email = "kyawkyalsinmoe.conceptx@gmail.com"},
     { id = 13, name = "Kyaw Myitzu Thar", age = 14, class = "Secondary 2A", method = "online", email = "kyawmyitzuthar.conceptx@gmail.com"},
-    { id = 14, name = "Lin Pyae Aung", age = 14, class = "Secondary 2A", method = "online", email = "linpyaeaungconceptx@gmail.com"},
+    { id = 14, name = "Lin Pyae Aung", age = 14, class = "Secondary 2A", method = "online", email = "linpyaeaungconceptx@gmail.com", image_url = "https://bug-free-space-fiesta-5ggxrpgvgpp724rxv-5118.app.github.dev/server/v2/assets/id_14_face.jpg"},
     { id = 15, name = "Wint Yati Kyaw", age = 14, class = "Secondary 2A", method = "online", email = "wintyatikyaw.conceptx@gmail.com"},
     { id = 16, name = "Mahay Thi", age = 14, class = "Secondary 2A", method = "online", email = "mahaythi.conceptx@gmail.com"},
-    { id = 17, name = "May Myat Mon", age = 14, class = "Secondary 2A", method = "online", email = "mmmconceptx@gmail.com"},
+    { id = 17, name = "May Myat Mon", age = 14, class = "Secondary 2A", method = "online", email = "mmmconceptx@gmail.com", image_url = "https://bug-free-space-fiesta-5ggxrpgvgpp724rxv-5118.app.github.dev/server/v2/assets/images/id_17_face.png"},
     { id = 18, name = "Nan Hom Kham", age = 14, class = "Secondary 2A", method = "online", email = "Unknown"},
     { id = 19, name = "Nan Mwam Mwam", age = 14, class = "Secondary 2A", method = "online", email = "Unknown"},
     { id = 20, name = "Nway Thit Cho", age = 14, class = "Secondary 2A", method = "online", email = "Unknown"},
