@@ -45,7 +45,7 @@ local studentData = {
     { id = 19, name = "Nan Mwam Mwam", age = 14, class = "Secondary 2A", method = "online", email = "Unknown"},
     { id = 20, name = "Nway Thit Cho", age = 14, class = "Secondary 2A", method = "online", email = "Unknown"},
     { id = 21, name = "Nyan Lin Myint", age = 14, class = "Secondary 2A", method = "online", email = "nyanlinmyint642010@gmail.com"},
-    { id = 22, name = "Paing Nyi Han", age = 14, class = "Secondary 2A", method = "online", email = "paingnyihan.conceptx@gmail.com"},
+    { id = 22, name = "Paing Nyi Han", age = 14, class = "Secondary 2A", method = "online", email = "paingnyihan.conceptx@gmail.com", image_url = "https://bug-free-space-fiesta-5ggxrpgvgpp724rxv-5118.app.github.dev/server/v2/assets/images/id_22_face.jpg"},
     { id = 23, name = "Pe Ti Khin Nan Win", age = 14, class = "Secondary 2A", method = "online", email = "petikhin.conceptx@gmail.com"},
     { id = 24, name = "San Wana Zaw", age = 14, class = "Secondary 2A", method = "online", email = "Unknown"},
     { id = 25, name = "Shine Wana Htun", age = 14, class = "Secondary 2A", method = "online", email = "Unknown"},
